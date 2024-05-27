@@ -34,7 +34,7 @@ def get_movies():
 def get_actors():
     return jsonify([{"id": actor.id, "name": actor.name} for actor in actors])
 
-@app.route('/healthcheck', methods=['GET'])
+@app.route('/', methods=['GET'])
 def healthcheck():
     return jsonify({"status": "healthy"})
 
